@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import "./Pagrindinis.css";
+import donorImage from '../assets/donoras.png';
 
 function Pagrindinis() {
   return (
     <>
       <div className="main-container">
         <h1>Kodėl verta tapti kraujo donoru?</h1>
-        <img src="./public/donoras.png" alt="donoras" className="donor-image" />
+        <img src={donorImage} alt="donoras" />
         <div className="text-container">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
