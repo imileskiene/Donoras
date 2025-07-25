@@ -5,16 +5,18 @@ import Registracija from "./pages/Registracija.jsx";
 import Sarasas from "./pages/Sarasas.jsx";
 import Informacija from "./components/Informacija.jsx";
 import { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import PageNotFound from "./pages/PageNotFound";
+
+import donorData from "./json_data/data.json";
 
 function App() {
   const [donors, setDonors] =useState([]);
 
-  const fetchDonors = async()=>{
-    const {data} = await axios.get("http://localhost:3000/donoras");
-    setDonors(data);
+  const fetchDonors = () => {
+    setDonors(donorData);
   };
+
     useEffect(() => {
       fetchDonors();
     }, []); 
