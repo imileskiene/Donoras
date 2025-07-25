@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 // import axios from "axios";
 import PageNotFound from "./pages/PageNotFound";
 
-import donorData from "./json_data/data.json";
+import donorData from "./json_server/data.json";
 
 function App() {
   const [donors, setDonors] =useState([]);
