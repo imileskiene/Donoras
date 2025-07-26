@@ -14,7 +14,7 @@ function App() {
   const [donors, setDonors] =useState([]);
 
   const fetchDonors = () => {
-    setDonors(donorData);
+    setDonors(donorData.donoras);
   };
 
     useEffect(() => {
