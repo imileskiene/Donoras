@@ -20,25 +20,17 @@
       "id": "449b2344-32eb-4f93-a7b5-c36e46cdce72",
       "firstName": "Jonas",
       "lastName": "Jonaitis",
-      "age": "38",
+      "age": "40",
       "gender": "vyras",
       "bloodGroup": "II rezus neigiama"
     },
     {
-      "id": "9f8948c6-7953-42ff-9e28-8add792f3d77",
-      "firstName": "Antanas",
-      "lastName": "Antanaitis",
-      "age": "21",
-      "gender": "vyras",
-      "bloodGroup": "III +"
-    },
-    {
-      "id": "6e8d978f-093f-4099-b742-f7ad3454e61b",
-      "firstName": "Inga",
-      "lastName": "Mileškienė",
-      "age": "42",
+      "id": "357f7e1d-d519-49e2-92f2-a6fe834a29be",
+      "firstName": "User",
+      "lastName": "Useraitis",
+      "age": "25",
       "gender": "moteris",
-      "bloodGroup": "2"
+      "bloodGroup": "3"
     }
   ]
 }

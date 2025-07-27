@@ -1,11 +1,11 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Registracija from "../pages/Registracija";
 import "./Informacija.css";
 
-function Informacija() {
+function Informacija({fetchDonors}) {
   const { id } = useParams();
   const navigate = useNavigate();
   const [donor, setDonor] = useState([]);
@@ -19,12 +19,15 @@ function Informacija() {
     fetchDonors();
   }, [id]);
 
+  
+
   const handleDelete = async () => {
     const confirmed = window.confirm(`Ar tikrai norite ištrinti?`);
     if (confirmed) {
       try {
         await axios.delete(`http://localhost:3000/donoras/${id}`);
-        navigate.push("/donoro-sarasas");
+        fetchDonors();
+        navigate("/donoro-sarasas");
       } catch (error) {
         console.error("Donoro ištrinti negalima:", error);
       }
@@ -46,11 +49,11 @@ function Informacija() {
           <button className="edit-button" onClick={() => setIsEditing(true)}>
             Redaguoti
           </button>
-          <Link to={`/donoro-sarasas/${id}`}>
+          
             <button className="delete-button" onClick={handleDelete}>
               Ištrinti
             </button>
-          </Link>
+          
         </>
       ) : (
         <Registracija donor={donor} setIsEditing={setIsEditing} />

@@ -30,7 +30,7 @@ function App() {
         />
         <Route path = "donoro-sarasas" element={<Sarasas donors={donors} fetchDonors={fetchDonors} />} />
         <Route  />
-        <Route path="donoro-informacija/:id" element={<Informacija />} />
+        <Route path="donoro-informacija/:id" element={<Informacija fetchDonors={fetchDonors}/>} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>
